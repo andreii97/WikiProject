@@ -16,15 +16,7 @@ $(document).ready(function () {
                 "description" : "A chi-squared test, also written as χ2 test, is any statistical hypothesis test where the sampling distribution of the test statistic is a chi-squared distribution when the null hypothesis is true. " +
                     "Without other qualification, 'chi-squared test' often is used as short for Pearson's chi-squared test. " +
                     "The chi-squared test is used to determine whether there is a significant difference between the expected frequencies and the observed frequencies in one or more categories."
-            },
-            {
-                "Name" : "Pearson's correlation"
-                "description" : "In statistics, the Pearson correlation coefficient (PCC, pronounced /ˈpɪərsən/), also referred to as Pearson's r, the Pearson product-moment correlation coefficient (PPMCC) or the bivariate correlation,[1] is a measure of the linear correlation between two variables X and Y." +
-                    " According to the Cauchy–Schwarz inequality it has a value between +1 and −1, where 1 is total positive linear correlation, 0 is no linear correlation, and −1 is total negative linear correlation." +
-                    " It is widely used in the sciences. It was developed by Karl Pearson from a related idea introduced by Francis Galton in the 1880s and for which the mathematical formula was derived and published by Auguste Bravais in 1844.[2][3][4][5][6] " +
-                    "The naming of the coefficient is thus an example of Stigler's Law."
             }
-
             ]
     };
 
