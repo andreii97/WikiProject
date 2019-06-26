@@ -16,9 +16,16 @@ $(document).ready(function () {
                 "description" : "A chi-squared test, also written as χ2 test, is any statistical hypothesis test where the sampling distribution of the test statistic is a chi-squared distribution when the null hypothesis is true. " +
                     "Without other qualification, 'chi-squared test' often is used as short for Pearson's chi-squared test. " +
                     "The chi-squared test is used to determine whether there is a significant difference between the expected frequencies and the observed frequencies in one or more categories."
+            },
+
+            {
+                "Name": "",
+                "description": ""
             }
             ]
     };
+
+
 
 
     x = myObj.Method[0].Name;
@@ -64,7 +71,23 @@ $(document).ready(function () {
 
         }
     });
+    $("#bla").on("click", function(){
+        // Get the input and its value
+        var firstValue = $("#texting").val();
+        var secondValue = $("#description").val();
+        myObj.Method[2].Name = firstValue;
+        myObj.Method[2].description = secondValue;
+        // Output the value
+        alert("So your method is called " + myObj.Method[2].Name + " , and this is how you describe it: " + myObj.Method[2].description);
+    });
 });
+
+
+
+
+
+
+
 
 
 
