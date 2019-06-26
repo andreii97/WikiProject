@@ -79,7 +79,10 @@ $(document).ready(function () {
         myObj.Method[2].description = secondValue;
         // Output the value
         alert("So your method is called " + myObj.Method[2].Name + " , and this is how you describe it: " + myObj.Method[2].description);
-    });
+        $.each(myObj, function (index, value) {
+            console.log(value);
+          });
+        });
 });
 
 
