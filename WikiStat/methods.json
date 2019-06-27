@@ -1,0 +1,23 @@
+{
+  "title": "Statistical Methods",
+  "content": [
+    {
+      "Method": "Linear Regression",
+      "Type": "Prediction",
+      "Description":
+        "In statistics, linear regression is a linear approach to modeling the relationship between a scalar response (or dependent variable) and one or more explanatory variables (or independent variables). The case of one explanatory variable is called simple linear regression. For more than one explanatory variable, the process is called multiple linear regression.[1] This term is distinct from multivariate linear regression, where multiple correlated dependent variables are predicted, rather than a single scalar variable.[2]"
+    },
+    {
+      "Method": "Pearson",
+      "Type": "Unknown",
+      "Description":
+        "The Pearson product-moment correlation coefficient (or Pearson correlation coefficient, for short) is a measure of the strength of a linear association between two variables and is denoted by r. Basically, a Pearson product-moment correlation attempts to draw a line of best fit through the data of two variables, and the Pearson correlation coefficient, r, indicates how far away all these data points are to this line of best fit (i.e., how well the data points fit this new model/line of best fit)."
+    },
+    {
+      "Method": "Chi-Square Test",
+      "Type": "Unknown",
+      "Description":
+        "A chi-squared test, also written as χ2 test, is any statistical hypothesis test where the sampling distribution of the test statistic is a chi-squared distribution when the null hypothesis is true. Without other qualification, 'chi-squared test' often is used as short for Pearson's chi-squared test. The chi-squared test is used to determine whether there is a significant difference between the expected frequencies and the observed frequencies in one or more categories. "
+    }
+  ]
+}
