@@ -12,20 +12,21 @@ public class AStar15Puzzle {
      */
     public static PartialSolution solveByAStar(Board board) {
         // TODO 1.3 solveAStar
-        PartialSolution psol = new PartialSolution(board); // partial solution
-        PartialSolution esol = new PartialSolution(psol); // empty partial solution(copy)
+        PartialSolution esol = new PartialSolution(board); // partial solution
 
         PriorityQueue<PartialSolution> Q = new PriorityQueue<>();  // priority queue of partial solutions
-        Q.add(esol);   //add(Q, esol, esol.f) ----- not sure
+        Q.add(esol);
+
 
         while(!Q.isEmpty()) {
-            psol = Q.poll();
+            PartialSolution psol = Q.poll();
             if(psol.isSolution()) {
                 return psol;
             }
             for (Move m : psol.validMoves()) {
-                psol.doMove(m);
-                Q.add(psol);     //psol.f ??
+                PartialSolution copy = new PartialSolution(psol);
+                copy.doMove(m);
+                Q.add(copy);
             }
         }
         return null;
