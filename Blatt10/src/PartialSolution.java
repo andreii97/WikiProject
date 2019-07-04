@@ -35,11 +35,11 @@ public class PartialSolution implements Comparable<PartialSolution> {
      *
      * @param that The partial solution that is to be copied
      */
-    public PartialSolution(PartialSolution that) {
+    public PartialSolution(PartialSolution that) {          // doesn't work
         // TODO 1.2 PartialSolution(PartialSolution)
-        this.b = that.b;
-        this.cost = that.cost;
-        this.moveSequence = that.moveSequence;
+        b = that.b;
+        cost = that.cost;
+        moveSequence = that.moveSequence;
     }
 
     /**
@@ -86,7 +86,7 @@ public class PartialSolution implements Comparable<PartialSolution> {
      * 
      * @return moves to be considered in the current situation
      */
-    public Iterable<Move> validMoves() {
+    public Iterable<Move> validMoves() {     // doesn't work
         // TODO 1.2 validMoves
         return b.validMoves();
     }
@@ -100,7 +100,7 @@ public class PartialSolution implements Comparable<PartialSolution> {
      * @param that the other partial solution
      * @return result of cost comparistion between this and that
      */
-    public int compareTo(PartialSolution that) {
+    public int compareTo(PartialSolution that) {    // doesn't work
         // TODO 1.2 compareTo
         int thisCost = this.cost;
         int thatCost = that.cost;
@@ -126,10 +126,10 @@ public class PartialSolution implements Comparable<PartialSolution> {
         AStar15Puzzle.printBoardSequence(board, psol.moveSequence());
 
         //myTest
-        String file = "samples/board-3x3-moresteps.txt";
+        /*String file = "samples/board-3x3-moresteps.txt";
         Board b = new Board(filename);
         PartialSolution psol1 = new PartialSolution(b);
-        System.out.println(psol.compareTo(psol1));
+        System.out.println(psol.compareTo(psol1));*/
     }
 }
 
