@@ -16,8 +16,6 @@ public class AStar15Puzzle {
 
         PriorityQueue<PartialSolution> Q = new PriorityQueue<>();  // priority queue of partial solutions
         Q.add(esol);
-
-
         while(!Q.isEmpty()) {
             PartialSolution psol = Q.poll();
             if(psol.isSolution()) {

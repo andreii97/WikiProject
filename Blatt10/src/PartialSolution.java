@@ -37,9 +37,11 @@ public class PartialSolution implements Comparable<PartialSolution> {
      */
     public PartialSolution(PartialSolution that) {          // doesn't work
         // TODO 1.2 PartialSolution(PartialSolution)
+        new Board(that.b);
         b = that.b;
         cost = that.cost;
         moveSequence = that.moveSequence;
+
     }
 
     /**
@@ -51,7 +53,7 @@ public class PartialSolution implements Comparable<PartialSolution> {
     public void doMove(Move move) {
         // TODO 1.2 doMove
         b.doMove(move);
-        moveSequence.add(move);
+        //moveSequence.add(move);
         cost++;
     }
 
@@ -102,9 +104,19 @@ public class PartialSolution implements Comparable<PartialSolution> {
      */
     public int compareTo(PartialSolution that) {    // doesn't work
         // TODO 1.2 compareTo
-        int thisCost = this.cost;
+        int thisCost = cost;
         int thatCost = that.cost;
-        return Math.abs(thisCost - thatCost);
+
+        if(thisCost > thatCost) {
+            return 1;
+        }
+        else if(thisCost < thatCost) {
+            return -1;
+        }
+        else {
+            return 0;
+        }
+
     }
 
     //@Override
@@ -118,16 +130,16 @@ public class PartialSolution implements Comparable<PartialSolution> {
 
 
     public static void main(String[] args) {
-        String filename = "samples/board-3x3-twosteps.txt";
+        /*String filename = "samples/board-3x3-twosteps.txt";
         Board board = new Board(filename);
         PartialSolution psol = new PartialSolution(board);
         psol.doMove(new Move(new Position(1, 2), 0));
         psol.doMove(new Move(new Position(2, 2), 3));
-        AStar15Puzzle.printBoardSequence(board, psol.moveSequence());
+        AStar15Puzzle.printBoardSequence(board, psol.moveSequence());*/
 
         //myTest
         /*String file = "samples/board-3x3-moresteps.txt";
-        Board b = new Board(filename);
+        Board b = new Board(file);
         PartialSolution psol1 = new PartialSolution(b);
         System.out.println(psol.compareTo(psol1));*/
     }
