@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Statistic101</title>
+        <script src="js/jquery-3.4.1.js"></script>
+        <script src="js/script.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+  
+            <div class="menu">
+                <a href="">Home</a>
+                <a href="wikistat.html">Method MAtcher</a>
+                <a href="overview.html">All Methods</a>
+                <a href="submitMethod.html">Submit Method</a>
+            </div>
+            
+        <h1>Welcome to Statistic101!</h1>
+        <a href="overview.html"><h3>Click here for an overview of all the methods</h3></a>
+        <!-- <h3>How Many Outcome Variables?</h3> -->
+
+        <div class="questions">
+            <div class="firstQuestion">
+                <label for="one">How many Outcome Variables?</label> <br>
+                <select id="one">
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="first">One</option>
+                    <option value="second">Two Or More</option>
+                </select>
+            </div>
+            <br> <br>
+            <!-- <h3>What Type of Outcome?</h3> -->
+            <div class="secondQuestion">
+                <label for="two">What Type of Outcome?</label> <br>
+                <select id="two">
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="1">Continuous</option>
+                    <option value="2">Categorical</option>
+                </select>
+            </div>
+            <br> <br>
+            <!-- <h3>How Many Predictor Variables?</h3> -->
+            <div class="thirdQuestion">
+                <label for="three">How Many Predictor Variables?</label> <br>
+                <select id="three">
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="1">One</option>
+                    <option value="2">Two Or More</option>
+                </select>
+            </div>
+            <br> <br>
+            <!-- <h3>What Type of Predictor?</h3> -->
+            <div class="fourthQuestion">
+                <label for="four">What Type of Predictor?</label> <br>
+                <select id="four">
+                    <option value="" disabled selected>Select your option</option>
+                    <option id="catg">Categorical</option>
+                    <option value="2">Continuous</option>
+                    <option value="3">Both Categorical and Continuous</option>
+                </select>
+            </div>
+            <br> <br>
+            <!-- <h3>Do Data Meet Assumptions for Parametric Tests?</h3> -->
+            <div class="fifthQuestion">
+                <label for="five">Do Data Meet Assumptions for Parametric Tests?</label> <br>
+                <select id="five">
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                </select>
+            </div>
+            <br> <br>
+        </div>
+
+        <button class="SubmitButton">Submit</button>
+        <br> <br> <br>
+        <!-- <h3>Do you maybe have a method in mind which you would like to add?</h3> -->
+        <label for="SubmitButton">Would you like to add a Method? If so consider submitting it!</label> <br> <br>
+        <button id="SubmitButton" class="SubmitButton" onclick="window.location.href='submitMethod.html'">Sounds great!</button>
+
+    </body>
+</html>
