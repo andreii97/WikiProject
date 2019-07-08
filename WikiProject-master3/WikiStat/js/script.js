@@ -84,48 +84,68 @@ $(document).ready(function () {
             alert("Great! Take a look at Independent Factorial ANOVA!");
             $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href='Methods/indepfac.html'\">Go to the Method</button>");
         }
-        else if(firstChoice === "One" && secondChoice === "Continuous" && thirdChoice === "One" && fourthChoice === "Categorical" && fifthChoice === "Yes" && categorical1 === "More Than Two" && categorical2 === "Different") {
+        else if(firstChoice === "One" && secondChoice === "Continuous" && thirdChoice === "One" && fourthChoice === "Categorical" && fifthChoice === "Yes" && categorical1 === "Two" && categorical2 === "Different") {
             alert("Great! Take a look at Independent t-test!");
             $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href='Methods/itt.html'\">Go to the Method</button>");
         }
-        else if(firstChoice === "" && secondChoice === "" && thirdChoice === "" && fourthChoice === "" && fifthChoice === "" && categorical1 === "" && categorical2 === "") {
-            $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href=''\">Go to the Method</button>");
+        else if(firstChoice === "One" && secondChoice === "Continuous" && thirdChoice === "One" && fourthChoice === "Categorical" && fifthChoice === "No" && categorical1 === "More Than Two" && categorical2 === "Different") {
+            alert("Great! Take a look at Kruskall-Wallis Test!");
+            $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href='Methods/kwt.html'\">Go to the Method</button>");
+        }
+        else if(firstChoice === "One" && secondChoice === "Categorical" && thirdChoice === "One" && fourthChoice === "Categorical" && categorical2 === "Different") {
+            alert("Great! Take a look at Pearson Chi-Square!");
+            $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href='Methods/likeratio.html'\">Go to the Method</button>");
         }
         else if(firstChoice === "" && secondChoice === "" && thirdChoice === "" && fourthChoice === "" && fifthChoice === "" && categorical1 === "" && categorical2 === "") {
             $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href=''\">Go to the Method</button>");
         }
-        else if(firstChoice === "" && secondChoice === "" && thirdChoice === "" && fourthChoice === "" && fifthChoice === "" && categorical1 === "" && categorical2 === "") {
+        else if(firstChoice === "One" && secondChoice === "Categorical" && thirdChoice === "Two Or More" && (fourthChoice === "Continuous" || fourthChoice === "Both Categorical and Continuous")) {
+            alert("Great! Take a look at Logistic Regression!");
+            $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href='Methods/logireg.html'\">Go to the Method</button>");
+        }
+        else if(firstChoice === "One" && secondChoice === "Categorical" && thirdChoice === "Two Or More" && fourthChoice === "Categorical" && categorical2 === "Different") {
+            alert("Great! Take a look at Loglinear Analysis!");
+            $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href='Methods/loglin.html'\">Go to the Method</button>");
+        }
+        else if(firstChoice === "One" && secondChoice === "Categorical" && thirdChoice === "One" && fourthChoice === "Continuous") {
+            alert("Great! Take a look at Point-Biserial Correlation!");
+            $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href='Methods/logreg.html'\">Go to the Method</button>");
+        }
+        else if(firstChoice === "Two Or More" && secondChoice === "Continuous" && thirdChoice === "Two Or More" && fourthChoice === "Both Categorical and Continuous" && fifthChoice === "Yes") {
+            alert("Great! Take a look at MANCOVA!");
+            $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href='Methods/mancova.html'\">Go to the Method</button>");
+        }
+        else if(firstChoice === "Two Or More" && secondChoice === "Continuous" && thirdChoice === "One" && fourthChoice === "Categorical" && fifthChoice === "Yes") {
+            alert("Great! Take a look at MANOVA!");
             $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href=''\">Go to the Method</button>");
         }
-        else if(firstChoice === "" && secondChoice === "" && thirdChoice === "" && fourthChoice === "" && fifthChoice === "" && categorical1 === "" && categorical2 === "") {
+        else if(firstChoice === "One" && secondChoice === "Continuous" && thirdChoice === "Two Or More" && fourthChoice === "Continuous" && fifthChoice === "Yes") {
+            alert("Great! Take a look at Multiple Regression");
             $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href=''\">Go to the Method</button>");
         }
-        else if(firstChoice === "" && secondChoice === "" && thirdChoice === "" && fourthChoice === "" && fifthChoice === "" && categorical1 === "" && categorical2 === "") {
-            $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href=''\">Go to the Method</button>");
+        else if(firstChoice === "One" && secondChoice === "Continuous" && thirdChoice === "One" && fourthChoice === "Categorical" && fifthChoice === "No" && categorical1 === "Two" && categorical2 === "Different") {
+            alert("Great! Take a look at Mann-Whitney Test");
+            $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href='Methods/mwt.html'\">Go to the Method</button>");
         }
-        else if(firstChoice === "" && secondChoice === "" && thirdChoice === "" && fourthChoice === "" && fifthChoice === "" && categorical1 === "" && categorical2 === "") {
-            $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href=''\">Go to the Method</button>");
+        else if(firstChoice === "One" && secondChoice === "Continuous" && thirdChoice === "One" && fourthChoice === "Categorical" && fifthChoice === "Yes" && categorical1 === "More Than Two" && categorical2 === "Same") {
+            alert("Great! Take a look at One Way Repeated Measures ANOVA!");
+            $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href='Methods/orm.html'\">Go to the Method</button>");
         }
-        else if(firstChoice === "" && secondChoice === "" && thirdChoice === "" && fourthChoice === "" && fifthChoice === "" && categorical1 === "" && categorical2 === "") {
-            $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href=''\">Go to the Method</button>");
+        else if(firstChoice === "One" && secondChoice === "Continuous" && thirdChoice === "One" && fourthChoice === "Categorical" && fifthChoice === "Yes" && categorical1 === "More Than Two" && categorical2 === "Different") {
+            alert("Great! Take a look at One Way Independent ANOVA!");
+            $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href='Methods/owiANO.html'\">Go to the Method</button>");
         }
-        else if(firstChoice === "" && secondChoice === "" && thirdChoice === "" && fourthChoice === "" && fifthChoice === "" && categorical1 === "" && categorical2 === "") {
-            $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href=''\">Go to the Method</button>");
+        else if(firstChoice === "One" && secondChoice === "Continuous" && thirdChoice === "One" && fourthChoice === "Continuous" && fifthChoice === "Yes") {
+            alert("Great! Take a look at Pearson Correlation or Regression!");
+            $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href='Methods/pearson.html'\">Go to the Method</button>");
         }
-        else if(firstChoice === "" && secondChoice === "" && thirdChoice === "" && fourthChoice === "" && fifthChoice === "" && categorical1 === "" && categorical2 === "") {
-            $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href=''\">Go to the Method</button>");
+        else if(firstChoice === "One" && secondChoice === "Continuous" && thirdChoice === "One" && fourthChoice === "Continuous" && fifthChoice === "No") {
+            alert("Great! Take a look at Spearman's Correlation or Kendall's Tau!");
+            $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href='Methods/spear.html'\">Go to the Method</button>");
         }
-        else if(firstChoice === "" && secondChoice === "" && thirdChoice === "" && fourthChoice === "" && fifthChoice === "" && categorical1 === "" && categorical2 === "") {
-            $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href=''\">Go to the Method</button>");
-        }
-        else if(firstChoice === "" && secondChoice === "" && thirdChoice === "" && fourthChoice === "" && fifthChoice === "" && categorical1 === "" && categorical2 === "") {
-            $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href=''\">Go to the Method</button>");
-        }
-        else if(firstChoice === "" && secondChoice === "" && thirdChoice === "" && fourthChoice === "" && fifthChoice === "" && categorical1 === "" && categorical2 === "") {
-            $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href=''\">Go to the Method</button>");
-        }
-        else if(firstChoice === "" && secondChoice === "" && thirdChoice === "" && fourthChoice === "" && fifthChoice === "" && categorical1 === "" && categorical2 === "") {
-            $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href=''\">Go to the Method</button>");
+        else if(firstChoice === "One" && secondChoice === "Continuous" && thirdChoice === "One" && fourthChoice === "Categorical" && fifthChoice === "No" && categorical1 === "Two" && categorical2 === "Same") {
+            alert("Great! Take a look at Wilcoxon Matched-Pairs Test!");
+            $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href='Methods/wmpt.html'\">Go to the Method</button>");
         }
     });
     $('.submitting').on("click", function () {
