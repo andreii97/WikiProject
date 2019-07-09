@@ -39,7 +39,32 @@
             <form action="#" id="form">
 
                 <label for="MethodName">Method Name:</label> <br> 
-                <input type="text" id="MethodName" name="name" placeholder="Write here ..."><br>
+                <input autocomplete="off" list="methods" type="text" id="MethodName" name="name" placeholder="Write here ..."><br>
+                <datalist id="methods">
+                    <option value="Multiple Regression/ANCOVA">
+                    <option value="Dependent t-test">
+                    <option value="Factorial MANOVA">
+                    <option value="Factorial Mixed ANOVA">
+                    <option value="Factorial Repeated Measures ANOVA">
+                    <option value="Friedman's ANOVA">
+                    <option value="Independent Factorial ANOVA/Multiple Regression">
+                    <option value="Independent t-test">
+                    <option value="Kruskall-Wallis Test">
+                    <option value="Pearson Chi-Square or Likelihood Ratio">
+                    <option value="Logistic Regression">
+                    <option value="Loglinear Analysis">
+                    <option value="Logistic Regression or Point-Biserial Correlation">
+                    <option value="MANCOVA">
+                    <option value="MANOVA">
+                    <option value="Multiple Regression">
+                    <option value="Mann-Whitney Test">
+                    <option value="One-Way Repeated Measures ANOVA">
+                    <option value="One-Way Independent ANOVA">
+                    <option value="Pearson Correlation or Regression">
+                    <option value="Spearman Correlation or Kendall's Tau">
+                    <option value="Wilcoxon Matched-Pairs Test">
+                </datalist>
+
             <!-- </form> -->
 
                 <br> 
@@ -52,6 +77,8 @@
                 <button class="submitting">Submit</button>
             </form>
         </div>
+
+
 
     </div>
 </body>

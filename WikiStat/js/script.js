@@ -156,7 +156,7 @@ $(document).ready(function () {
         var firstValue = $("#MethodName").val();
         var secondValue = $("#description").val();
         // Output the value
-        //alert("So your method is called " + firstValue + " , and this is how you describe it: " + secondValue);
+        alert("So your method is called " + firstValue + " , and this is how you describe it: " + secondValue);
     });
 });
 
