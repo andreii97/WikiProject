@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submit your own Method!</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="icon" type="image/png" href="../Images/LogoStat.png" sizes="32x32">
+</head>
+<body>
+        <div class="menu">
+            <img src="../Images/LogoStat.png" alt="Logo">
+                <a href="../home.html">Home</a>
+                <a href="../wikistat.html">Method Matcher</a>
+                <a href="../overview.html">All Methods</a>
+                <a href="../submitMethod.html">Submit Method</a>
+            </div>
+            
+            <div class="content">
+    <h1>Dependent t-test</h1>
+    <div class="chi">
+
+        <p>
+                short:  tests for difference between two related variables
+        </p>
+
+        <h2>Introduction: </h2>
+        <p>
+                The paired t-test (also called the paired-samples t-test or dependent t-test) is a statistical procedure used to compare the means between two related groups  based on the same continuous dependent variable. Specifically the test is used to determine whether the mean difference between two sets of observations is zero. Before-and-after observations on the same subjects are suitable for this test. For instant you could analyse the difference in managers' salaries before and after undertaking a PhD. Your dependent variable would be 'salary' and your two related groups would be two different 'time points' that is the salary 'before' and 'after' undertaking the PhD. But also the comparison of two methods of measurement or two different treatments where the measurements/treatments are applied to the same subject (i.e. the use of a stethoscope and a dynamap for a blood pressure measurement).
+        </p>
+
+        <br>
+        <h2>Assumptions: </h2>
+        <p>
+                In the following you can see the  four assumptions you must meet in order for a dependent t-test to give your data a valid result.
+        </p>
+
+        <ol>
+            <li>Assumption: The dependent variable should be continous. Such as height, temperature, salary, revision time, intelligence (measured in using IQ score), reaction time, test, sales etc.. are measurable at the interval or ratio level. For me help you can see more Types of Variables here statistic.laerd.com </li>
+            <li>Assumption: The independent variable should consists of two categorial, 'related groups' or 'matched pairs'. That means the same subjects must be present in both groups because the subject has been measured on two occasions on the same dependent variable. For example: the dependent variable – 50 participants doing type speed using a keyboard two 'related groups' of independent varible – 'before' and 'after' the touch-typing course. These groups are relates because they were measured at theses two time points.</li>
+            <li>Assumption: There should not be a an outlier in the difference between the two related groups which means that an outlier is a single data point within your data that does not follow the usual pattern. These outliers can have a negative impact on the paired t-test and reduce the accuracy of the final result. </li>
+            <li> Assumption: The distribution of the differences in the dependent variable between the two related groups should be approximately normally distributed. We talk about the paired t-test only requiring approximately normal data because it is quite "robust" to violations of normality, meaning that the assumption can be a little violated and still provide valid results. You can test for normality using the Shapiro-Wilk test of normality, which is easily tested for using Stata. </li>
+        </ol>
+            
+        <br>
+        <h2>Example: </h2>
+        <p>
+                A company researcher wants to test a new formular for a medecine that has been designed to improve the increased blood pressure as a result of  health problems. The researcher would like to know wether this new medecine leads to a difference in running performance compared to not taking any medecine. In order to carry out the experiment, the researcher tested 60 females and males with a agegroup between 35-60+. All of the participants needed two trials in which they had to run for 2,5 hours on a treadmill. In the one trial, the same participants completed the run without taking any medicines and in the other trial they completed the run with the intake of the medicine. 
+        </p>
+
+        <br>
+        <h4>Setup in Python: </h4>
+        <p>
+                In Python we created two variables. These are 'bp_before' and 'bp_after'. The next step is to import panda as pd, the data, and then take a look at the data
+        </p>
+        <br>
+        <img src="../Images/ddt/ok.jpg" alt="Home Image">
+        <br>
+        <img src="../Images/ddt/ok.jpg" alt="Home Image">
+        <br>
+
+        <br>
+        <h2>Checking the Assumptions: </h2>
+       
+        <h4>Assumption check: Outliers</h4>
+        <p>
+                For checking the assumption we need to import the stats library and then test the assumptions of the paired t-est. The first thing to do is to check for any significant outliers in each of the variables.    
+        </p>
+
+        <br>
+        <img src="../Images/ddt/ok.jpg" alt="Home Image">
+        <br>
+        <img src="../Images/ddt/ok.jpg" alt="Home Image">
+        <br>
+        <p>
+                As you can see there are not any significant outliers in the variables. 
+        </p>
+
+        <br>
+        <h4>Assumption check: Normal Distribution</h4>
+
+        <p>
+                As mentioned before the normality check needs to be conducted on differences between two scores. There are a few ways one can test this assumption – the use of a histogram, make a Q-QPlot or use a statistical test.
+                <br>
+                In this case we gonna show how to check this assumption with the help of a Q-Q Plot. Create a variable for the differences and run through these. If you a unfamiliar with how to read s Q-Qplot,, the data should be on the red line. If that is not the case, then it suggests that the data may not be normally distributed.                
+        </p>
+        <br>
+        <img src="../Images/ddt/ok.jpg" alt="Home Image">
+        <br>
+        <img src="../Images/ddt/ok.jpg" alt="Home Image">
+        <br>
+        <p>
+                As you can see there is some deviation from normality but it does not seem to be severe. Which means that there is no worry. 
+        </p>
+
+        <br>
+        <h4>Paired Samples T-Test Example</h4>
+        <p>
+                To conduct the paired t-test, it needs to use the <i>stats.ttest_rel() method.</i>
+        </p>
+
+        <br>
+        <img src="../Images/ddt/ok.jpg" alt="Home Image">
+        <br>
+
+        <p>
+                The findings you will see are statistically significant! One can reject the null hypothesis in support of the alternativ. Another component needed to report the findings is the degrees of freedom (df). This can be calculated by taking the total number of paired observations and subtracting 1. In our case, df = 120 – 1 = 119.
+        </p>
+
+        <br>
+        <h2>Interpretation of the Results</h2>
+        <p>
+                he paired t-test was used to analyze the blood pressure before and after taking the medecine to test if the intervention had a significant affect on the blood pressure. The blood pressure before the intervention was higher (156.45 ± 11.39 units) compared to the blood pressure post intervention (151.36 ± 14.18 units); there was a statistically significant decrease in blood pressure (t(119)=3.34, p= 0.0011) of 5.09 units.
+        </p>
+
+
+
+            
+            <br> <br>
+        <label for="SubmitButton">Do you know another Method by heart? If so please consider submitting it!</label> <br> <br>
+        <button id="SubmitButton" class="SubmitButton" onclick="window.location.href='../submitMethod.html'">Sounds great!</button>
+    </div>
+
+</div>
+</body>
+</html>

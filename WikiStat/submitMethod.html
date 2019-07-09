@@ -3,23 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title>Submit your own Method!</title>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous">
-    </script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/script.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" href="Images/LogoStat.png" sizes="32x32">
 </head>
 <body>
-    <h1>You can submit your own method down here!</h1>
-    <br> <br>
-    <form action="#" id="form">
-        <h2>Method Name:</h2><br> <input type="text" id="texting" name="name"><br>
-    </form>
-    <br> <br> <br>
-    <h2>Describe your method!</h2>
-    <textarea id="description" rows="4" cols="50">
-    </textarea>
-    <br> <br>
-    <button id="bla">Submit this method!</button>
+    <div class="menu">
+        <img src="Images/LogoStat.png" alt="Logo">
+        <a href="home.html">Home</a>
+        <a href="wikistat.html">Method Matcher</a>
+        <a href="overview.html">All Methods</a>
+        <a href="submitMethod.html">Submit Method</a>
+    </div>
+
+    <div class="content">
+                
+        <h1>You can submit your own method down here!</h1>
+
+        <br>
+        <br>
+
+        <img src="Images/Upload.png" alt="Upload Method Image" style="float:right; width: 45%;">
+
+        
+        <p>
+            Do you think you can help us by adding a new method? You landed on the right page! Please fill out the following form and thank you for your participation!
+        </p>
+
+        <br>
+        <br>
+        
+        <div class="SubmitForum">
+            <form action="#" id="form">
+
+                <label for="MethodName">Method Name:</label> <br> 
+                <input type="text" id="MethodName" name="name" placeholder="Write here ..."><br>
+            <!-- </form> -->
+
+                <br> 
+
+                <label for="description">Describe your Method here:</label> <br>
+                <textarea id="description" rows="4" cols="50" placeholder="Write here ..."></textarea>
+
+                <br> <br>
+
+                <button class="submitting">Submit</button>
+            </form>
+        </div>
+
+    </div>
 </body>
 </html>

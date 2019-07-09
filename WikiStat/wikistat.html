@@ -6,56 +6,101 @@
         <script src="js/jquery-3.4.1.js"></script>
         <script src="js/script.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/png" href="Images/LogoStat.png" sizes="32x32">
     </head>
     <body>
-        <h1>Welcome to Statistic101!</h1>
-        <a href="http://localhost:63343/WikiStat/overview.html?_ijt=76spgn10qht4ngbcmbc8dovv3u"><h3>Click here for an overview of all the methods</h3></a>
-        <h3>How Many Outcome Variables?</h3>
-        <div class="questions">
-            <div class="firstQuestion">
-                <select id="one">
-                    <option value="first">One</option>
-                    <option value="second">Two Or More</option>
-                </select>
-            </div>
-            <br> <br>
-            <h3>What Type of Outcome?</h3>
-            <div class="secondQuestion">
-                <select id="two">
-                    <option value="1">Continuous</option>
-                    <option value="2">Categorical</option>
-                </select>
-            </div>
-            <br> <br>
-            <h3>How Many Predictor Variables?</h3>
-            <div class="thirdQuestion">
-                <select id="three">
-                    <option value="1">One</option>
-                    <option value="2">Two Or More</option>
-                </select>
-            </div>
-            <br> <br>
-            <h3>What Type of Predictor?</h3>
-            <div class="fourthQuestion">
-                <select id="four">
-                    <option id="catg">Categorical</option>
-                    <option value="2">Continuous</option>
-                    <option value="3">Both Categorical and Continuous</option>
-                </select>
-            </div>
-            <br> <br>
-            <h3>Do Data Meet Assumptions for Parametric Tests?</h3>
-            <div class="fifthQuestion">
-                <select id="five">
-                    <option value="1">Yes</option>
-                    <option value="2">No</option>
-                </select>
-            </div>
-            <br> <br>
+        <div class="menu">
+            <img src="Images/LogoStat.png" alt="Logo">
+            <a href="home.html">Home</a>
+            <a href="wikistat.html">Method Matcher</a>
+            <a href="overview.html">All Methods</a>
+            <a href="submitMethod.html">Submit Method</a>
         </div>
-        <button class="btn">Submit</button>
-        <br> <br>
-        <h3>Do you maybe have a method in mind which you would like to add?</h3>
-        <button class="bttn" onclick="window.location.href = 'http://localhost:63343/WikiStat/submitMethod.html?_ijt=3mq4pqpnee8g10jetiaftdacrt';">Sure why not?!</button>
+
+        <div class="content">
+                
+            <h1>Welcome to Method Matcher!</h1>
+            <!-- <h3>How Many Outcome Variables?</h3> -->
+
+            <br>
+            <br>
+
+            <!-- <img src="Images/Matchfinder.png" alt="Match Maker Image" style="float:right; width: 45%;"> -->
+
+            <p>
+                    In order to find a suitable method for you, you need to answer the questions we have already prepared. It will direct you to the best method according to the data you have. Make sure you answer the questions and do not hesitate to click help button whenever you need any help.
+            </p>
+
+            <br>
+            <br>
+
+            <div class="questions">
+                <div class="firstQuestion">
+                    <label for="one">How many Outcome Variables?</label> <br>
+                    <select id="one">
+                        <option value="" disabled selected>Select your option</option>
+                        <option value="first">One</option>
+                        <option value="second">Two Or More</option>
+                    </select>
+                </div>
+                <br> <br>
+                <!-- <h3>What Type of Outcome?</h3> -->
+                <div class="secondQuestion">
+                    <label for="two">What Type of Outcome?</label> <br>
+                    <select id="two">
+                        <option value="" disabled selected>Select your option</option>
+                        <option value="1">Continuous</option>
+                        <option value="2">Categorical</option>
+                    </select>
+                </div>
+                <br> <br>
+                <!-- <h3>How Many Predictor Variables?</h3> -->
+                <!-- <img src="Images/Matchfinder.png" alt="Match Maker Image" style="float:right; width: 45%;"> -->
+
+                <div class="thirdQuestion">
+                    <label for="three">How Many Predictor Variables?</label> <br>
+                    <select id="three">
+                        <option value="" disabled selected>Select your option</option>
+                        <option value="1">One</option>
+                        <option value="2">Two Or More</option>
+                    </select>
+                </div>
+                <br> <br>
+                <!-- <h3>What Type of Predictor?</h3> -->
+                <div class="fourthQuestion">
+                    <label for="four">What Type of Predictor?</label> <br>
+                    <select id="four">
+                        <option value="" disabled selected>Select your option</option>
+                        <option id="catg">Categorical</option>
+                        <option value="2">Continuous</option>
+                        <option value="3">Both Categorical and Continuous</option>
+                    </select>
+                </div>
+                <br> <br>
+                <!-- <h3>Do Data Meet Assumptions for Parametric Tests?</h3> -->
+                <img src="Images/Matchfinder.png" alt="Match Maker Image" style="float:right; width: 45%;">
+
+                <div class="fifthQuestion">
+                    <label for="five">Do Data Meet Assumptions for Parametric Tests?</label> <br>
+                    <select id="five">
+                        <option value="" disabled selected>Select your option</option>
+                        <option value="1">Yes</option>
+                        <option value="2">No</option>
+                    </select>
+                </div>
+                <br> <br>
+            </div>
+
+            <button class="SubmitButton">Submit</button>
+            <br> <br>
+            
+            <a href="overview.html">Click here for an overview of all the methods</a>
+
+            <br> <br>
+            <!-- <h3>Do you maybe have a method in mind which you would like to add?</h3> -->
+            <label for="bling"> <b>Would you like to add a Method? If so consider submitting it!</b></label> <br> <br>
+            <button id="bling" class="newClass" onclick="window.location.href='submitMethod.html'">Sounds great!</button>
+
+        </div>
     </body>
 </html>
