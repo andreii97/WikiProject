@@ -54,8 +54,8 @@ $(document).ready(function () {
         });
     });
 
-    $('.SubmitButton').on('click', function () {
-        alert("So you chose " + firstChoice + " as number of variables, " + secondChoice + " as outcome type, and " + thirdChoice + " as number of predictor variables. The predictor is " + fourthChoice);
+    $('.SubmitButton').one('click', function () {
+        //alert("So you chose " + firstChoice + " as number of variables, " + secondChoice + " as outcome type, and " + thirdChoice + " as number of predictor variables. The predictor is " + fourthChoice);
         if(firstChoice === "One" && secondChoice === "Continuous" && thirdChoice === "Two Or More" && fourthChoice === "Both Categorical and Continuous" && fifthChoice === "Yes") {
             //alert("Great! Take a look at Multiple Regression!");
             $('.SubmitButton').after("<button class='SubmitButton' onclick=\"window.location.href='Methods/ancova.html'\">Go to the Method</button>");
