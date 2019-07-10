@@ -10,27 +10,425 @@
     <link rel="icon" type="image/png" href="../Images/LogoStat.png" sizes="32x32">
 </head>
 <body>
-        <div class="menu">
-            <img src="../Images/LogoStat.png" alt="Logo">
-                <a href="../home.html">Home</a>
-                <a href="../wikistat.html">Method Matcher</a>
-                <a href="../overview.html">All Methods</a>
-                <a href="../submitMethod.html">Submit Method</a>
-            </div>
-
-            <div class="content">
-            
-    <h1>Pearson Correlation or Regression</h1>
-    <br>
-    <div class="chi">
-        <h2>Description: </h2>
-        <p>
-            This Method seems to be missing in our archives!:O      </p>
-            <br> <br>
-
-        <label for="SubmitButton">Do you know this Method by heart? If so please consider submitting it!</label> <br> <br>
-        <button id="SubmitButton" class="SubmitButton" onclick="window.location.href='../submitMethod.html'">Sounds great!</button>
+    <div class="menu">
+        <img src="../Images/LogoStat.png" alt="Logo">
+            <a href="../home.html">Home</a>
+            <a href="../wikistat.html">Method Matcher</a>
+            <a href="../overview.html">All Methods</a>
+            <a href="../submitMethod.html">Submit Method</a>
     </div>
-</div>
+
+    <div class="content"  >
+                
+        <h1>Pearson Correlation AND Simple Regression</h1>
+        <br>
+        <div class="pearson">
+
+            <p>
+                This page contains the methods "Pearson Correlation" <b>and</b> "Simple Regression", because both are suitable for
+                comparable Data. To skip to "Simple Regression" you can click <b><a href="#simple_regression">here!</a></b>
+            </p>
+            <br>
+
+            <h1>Pearson Correlation</h1>
+            <br>
+
+            <p>
+                The Pearson's correlation, also called the Pearson product-moment correlation coefficient is  a measure of the degree of the relationship between  two linearly related variables.
+                <br>
+                For instant with the help of Pearson Correlation you can understand whether there is an association between two stocks  in the stock market. You would want to measure how the two stocks are related to each other. 
+                <br>
+                This Correlation  tries to draw a line of best fit through the data of two variables. The coefficient r shows how far away all these date points are from this line of best fit. For example it indicates how well the data points fit this model/line of best fit.
+            </p>
+
+            <br>
+            <h2>Assumptions </h2>
+            <p>
+                In the following you can see the assumptions you must meet in order for a  Person Correlation to give your data a valid result. 
+            </p>
+
+            <ol>
+                    <li>
+                        Assumption: The two variables should be continuous. Such as height, temperature, salary, revision time, intelligence (measured in using IQ score), reaction time, test, sales etc.. are measurable at the interval or ratio level. For me help you can see more Types of Variables here statistic.laerd.com 
+                    </li>
+                    <li>
+                        Assumption: For the second requirement there should a linear relationship exists between the two variables. In order to check  for linearity  we suggest you  to create a scatterplot. There you can plot one variable against the other and then check. In the following you can see an example if how it could look like 
+                        <br><br>
+                        <img src="../Images/pearson/pearson1.png" alt="First Image">
+                        <br><br>
+                        If  it happens that the relationship showed in your scatterplot is  not linear, you will have to either run a non  nonparametric equivalent to Pearson’s correlation or transform your data. Side note: Pearson's correlation determines whether there is a linear component of association between two continuous variables. Actually linearity is not an assumption itself but you would not want to pursue a Pearson's correlation to determine the strength and direction of a linear relationship when you already know the relationship between your two variables is not linear.
+                        <br>
+                        Then you would choose another statistical method. That is the reason why it is better to decide the use of the Pearson's correlation or not with the help of a scatterplot.
+                    </li>
+                    <li>
+                        Assumption: There should not be  significant outliers. As mentioned before the coefficient r is sensitive to outliers which can have a major impact on the line of correlation coefficient. In some cases, including outliers in your analysis can lead to misleading results. That is why there should not be any outliers or they should be only kept to a mininum. 
+                    </li>
+                    <li>
+                        Assumption: The variables should be approx. normally distributed. 
+                    </li>
+            </ol>
+                
+            <br>
+            <h2>Example </h2>
+            <p>
+                We gonna use the example of leard.com where researchers want to find out if cholesterol 
+                concentration also increase as people spent more time watching TV or maybe did the opposite 
+                happen. Especially for healthy 45 and 65 years old men ( an at- risk category of people). 
+                Cholesterol is a health problem for people with high risk of suffering from heart disease because of 
+                fat in blood. 
+                <br>
+                Therefore 100 healthy male participants has been recruited  between 45  and 65 years old. The 
+                amount of time of watching TV (e.g. the variable, <b>time_tv</b>)  and cholesterol concentration (e.g., the 
+                variable,  <b>cholesterol</b>) were recorded for all participants.  Now the researcher wants to correlate  
+                <b>cholesterol</b>  and  <b>time_tv.</b>
+            </p>
+
+            <br>
+            <h4>Setup in Stata </h4>
+            <p>
+                    In order to use stata follow the site below to download/purchase stata: 
+                    <br>
+                    <a href="https://www.stata.com/order/download-details/">https://www.stata.com/order/download-details/</a>
+            </p>
+
+            <ol>
+                <li>
+                    Create two variables: (1) time_tv = the average daily time spent watching TV in min (2) cholesterol=  cholesterol concentration in mmol/L 
+                    <br>
+                    Note: the variables mean two 'related groups'
+                </li>
+
+                <li>
+                    Enter the scores for each  into the two columns of the <b>Data Editor(Edit)</b> spreadsheet .  One 
+                    column for carb and the other for carb_protein 
+                    <br>
+                    Test the procedure in Stata: 
+                    <br>
+                    If in the previous section the Assumptions have not been violated. 
+                    We gonna cary out the test using Stata's graphical user interface(GUI). 
+                    <br><br>
+                    <img src="../Images/pearson/pearson2.png" alt="Second Image">
+                    <br><br>
+                </li>
+                    
+                <li>
+                    Test the procedure in Stata:
+                    <br>
+                    If in the previous section the Assumptions have not been violated.
+                    We gonna cary out the test using Stata's graphical user interface(GUI). 
+                </li>
+
+                <li>
+                    In Stata Version 13 all you need to do is  click  
+                    <b>Statistics > Summaries, tables, and tests > Summary and descriptive statistics  > 
+                    Pairwise correlations</b> on the top menu, as shown below.
+                    <br><br>
+                    <img src="../Images/pearson/pearson3.png" alt="Third Image">
+                    <br><br>
+                    You will see  <b>pwcorr -  Pairwise correlation of variables</b>  dialogue box: 
+                    <br><br>
+                    <img src="../Images/pearson/pearson4.png" alt="Fourth Image">
+                    <br><br>
+                    Next: Select <b>cholesterol</b>  and  <b>time_tv</b>  from wuthin the variables: (leave empty for all) box, using 
+                    the tick button. Next tick the print number of observations for each entry, tick print significance 
+                    level for each entry and tick significance level for displaying with a star boxes. You will end up 
+                    with the following screen.
+                    <br><br>
+                    <img src="../Images/pearson/pearson5.png" alt="Fifth Image">
+                    <br><br>
+                    Click the <b>OK</b> button.
+                </li>
+            </ol>
+
+
+            <br>
+            <h2>Output </h2>
+            
+            <br>
+                    <img src="../Images/pearson/pearson6.png" alt="Sixth Image"> 
+            <br><br>
+            
+            <p>
+                The output contains three important pieces of information: (1) the sample size(2)the Pearson correlation coefficient;and (3) the level of statistical significance
+                <br> <br>
+                (1) The sample size,n (i.e., the number of observations):You can see it in the third row of the red box. It shows the 100 participants of the study
+                <br>
+                (2) The Pearson correlation coefficient, r,  shows the strength and direction of the association between cholesterol and time_tv: You can see it in the first row of the red box. As shown the Pearson correlation coefficient, r, is .3709. The sign of the Pearson correlation coefficient is positive, which means  there is a positive correlation between cholesterol concentration (cholesterol) and daily time spent watching TV (time_tv) 
+                <br>
+                (3) The level of statistical significance (i.e., the p-value), and if the test is statistically significant, a star (*) next to the Pearson's correlation coefficient:You can see it in the second row of the red box. You need to test the level of statistical significance if you want to test hypotheses about the linear relationship between your variables in the population your sample is from.  The level of statistical significance (<i>p-value</i>) of the correlation coefficient in this example is .0001, which means that there is a statistically significant relationship between <b>cholesterol concentration  and  daily time spent watching TV.</b>
+            </p>
+
+            <br>
+            <h4>Interpretation</h4>
+
+            <p>
+                    Please keep the following in mind when you report the output:  
+                    <br>
+                    <ol>
+                            <li>
+                                    An introduction to the analysis
+                            </li>
+
+                            <li>
+                                    The coefficient of determination r<sup>2</sup>
+                            </li>
+
+                            <li>
+                                    The Pearson correlation coefficient,r, and degrees of freedom, which is the sample size minus 2 (e.g., for a sample size of 100, the degrees of freedom would be98, as in the  
+                                    example).
+                            </li>
+
+                            <li>
+                                    Information about your sample (including any missing values). 
+                            </li>
+
+                            <li>
+                                    The statistical significance level (i.e.,p-value) of your result.
+                            </li>
+                    </ol>
+                    In the end it could look like this:
+                    <br>
+                    The researcher  conducted a Pearson's Correlation  with a sample of 100   males aged 45 and 65 years to determine whether there was a significant  relationship between cholesterol concentration and daily time spent watching  TV. As the results showed there was a positiv correlatuon between daily time  spent watching TV and cholesterol concentration, r(98) = .371, p < .0005 with  time spent watching TV explaining 14 % of the variation in cholesterol  concentration.
+                </p>
+            
+                <br>
+                <h4>Sources </h4>
+        
+                <p>
+                        <a href="https://statistics.laerd.com/stata-tutorials/pearsons-correlation-using-stata.php#output">https://statistics.laerd.com/stata-tutorials/pearsons-correlation-using-stata.php#output</a>  
+                        <br>
+                        <a href="https://statistics.laerd.com/spss-tutorials/pearsons-product-moment-correlation-using-spss-statistics.php">https://statistics.laerd.com/spss-tutorials/pearsons-product-moment-correlation-using-spss-statistics.php</a>  
+                        <br>
+                        <a href="https://www.statisticssolutions.com/correlation-pearson-kendall-spearman/">https://www.statisticssolutions.com/correlation-pearson-kendall-spearman/</a>  
+                        <br>
+                        <a href="https://www.datascience.com/learn-data-science/fundamentals/introduction-to-correlation-python-data-science">https://www.datascience.com/learn-data-science/fundamentals/introduction-to-correlation-python-data-science</a>  
+                        <br>
+                        <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html">https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html</a>  
+                        <br>
+                        <a href="https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.pearsonr.html">https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.pearsonr.html</a>  
+                        <br>
+                        <a href="https://pythonfordatascience.org/correlation-python/#scipy-correlation">https://pythonfordatascience.org/correlation-python/#scipy-correlation</a>  
+                        <br>
+                        
+                </p>
+
+
+                <a name="simple_regression"></a>
+
+                <br> <br>
+
+                <h1>Simple Regression</h1>
+                <br>
+    
+                <p>
+                    Simple regression is a statistical method that helps us to summarize and study relationships between two continuous (quantitative) variables. We predict scores on one variable from the scores on second variable. The first variable, denoted y, is regarded as criterion, response, outcome or dependent variable . The other variable, denoted x, is regarded as predictor, explanatory or independent variable. Because there is only one predictor variable, the prediction method is called simple regression. 
+                </p>
+    
+                <br>
+                <h2>Assumptions </h2>
+
+                <ol>
+                        <li>
+                                Assumption: Linear relationship. The relationship between the independent and dependent variables needs to be linear. 
+                                <br><br>
+                                <img src="../Images/pearson/simple1.png" alt="First Image">
+                                <br><br>
+                        </li>
+
+                        <li>
+                                Assumption: There should not be significant outliers. Simple regression is sensitive to outlier and can lead to misleading results. 
+                                <br><br>
+                                <img src="../Images/pearson/simple2.png" alt="Second Image">
+                                <br><br>
+                        </li>
+
+                        <li>
+                                Assumption: Continuous. The dependent variable should be continous. Such , revision time, intelligence (measured in using IQ score), etc.. are measurable at the interval or ratio level. For me help you can see more Types of Variables here statistic.laerd.com 
+                        </li>
+
+                        <li>
+                                Assumption: Homoscedasticity(constant variance). The variance around the regression line should be the same for all values of X. 
+                                <br><br>
+                                <img src="../Images/pearson/simple3.png" alt="Third Image">
+                                <br><br>
+                                As you can in this example  notice the predictions for students with high high-school GPAs are very good but the predictions for students with low high-school GPAs are not very good. That means while the the points for students with high high-school GPAs are close to the regression line , the points for low high-school GPA students are not. 
+                        </li>
+
+                        <li>
+                                Assumption: The residuals(errors) of the regression line needs to be approx. normally distributed. Two common methods to check this assumption include using either a histogram (with a superimposed normal curve) or a Normal P-P Plot. 
+                        </li>
+                </ol>
+                    
+                <br>
+                <h2>Example </h2>
+                <p>
+                    To explain you the test we will use the example we already used for the <b>Pearson's Correlation.</b> 
+                    We gonna use the example of leard.com where researchers want to find out if cholesterol 
+                    concentration also increase as people spent more time watching TV or maybe did the opposite 
+                    happen. Especially for healthy 45 and 65 years old men ( an at- risk category of people). 
+                    Cholesterol is a health problem for people with high risk of suffering from heart disease because of 
+                    fat in blood. 
+                    <br>
+                    Therefore 100 healthy male participants has been recruited  between 45  and 65 years old. The 
+                    amount of time of watching TV (e.g. the variable, <b>time_tv</b>)  and cholesterol concentration (e.g., the 
+                    variable,  <b>cholesterol</b>) were recorded for all participants.  Now the researcher wants to regress 
+                    <b>cholesterol</b>  and  <b>time_tv.</b>
+                </p>
+    
+                <br>
+                <h4>Setup in Stata </h4>
+                <p>
+                        In order to use stata follow the site below to download/purchase stata: 
+                        <br>
+                        <a href="https://www.stata.com/order/download-details/">https://www.stata.com/order/download-details/</a>
+                </p>
+    
+                <ol>
+                    <li>
+                            Create two variables: (1) time_tv = the average daily time spent watching TV in min (2) cholesterol=  cholesterol concentration in mmol/L 
+                            <br>
+                            Note: the variables mean two 'related groups' 
+                    </li>
+    
+                    <li>
+                            Enter the scores for each  into the two columns of the <b>Data Editor(Edit)</b> spreadsheet .  One column for carb and the other for carb_protein
+                            <br><br>
+                            <img src="../Images/pearson/simple3.png" alt="Third Image">
+                            <br><br>
+                    </li>
+                        
+                    <li>
+                            Test the procedure in Stata: 
+                            <br>
+                            If in the previous section the Assumptions have not been violated. We gonna cary out the test using Stata's graphical user interface(GUI). 
+                    </li>
+    
+                    <li>
+                            In Stata Version 13 all you need to do is  click <b>Statistics >Linear models and related > Linear regression</b>  on the top menu, as shown below.
+                            <br><br>
+                            <img src="../Images/pearson/simple4.png" alt="Fourth Image">
+                            <br><br>
+                            You will see the Regress – Linear regression dialogue box:
+                            <br><br>
+                            <img src="../Images/pearson/simple5.png" alt="Fifth Image">
+                            <br><br>
+                            Now select <b>time_tv</b> from the Independent variables drop- down box and the <b>cholesterol</b>  from the Dependent variable drop-down box.
+                            <br><br>
+                            <img src="../Images/pearson/simple7.png" alt="Sixth Image">
+                            <br><br>
+                            Click enter.
+                    </li>
+                </ol>
+    
+    
+                <br>
+                <h2>Output </h2>
+                
+                <br>
+                    <img src="../Images/pearson/simple8.png" alt="Seventh Image"> 
+                <br><br>
+                
+                <p>
+                    The output consists of four important pieces of information: 
+                </p>
+                <ol>
+                    <li>
+                            An adjusted R<sup>2</sup>value ("Adj R-squared" row): it  corrects positive bias to provide a value that would be expected in the population 
+                    </li>
+
+                    <li>
+                            The coefficients for the constant and independent variable ("Coef." column),in order to predict the dependent variable <b>cholesterol</b> using the independent variable <b>time_tv</b>
+                    </li>
+
+                    <li>
+                            The F value, degrees of freedom ("F( 1, 98)") and statistical significance of the regression model ("Prob > F" row) 
+                    </li>
+
+                    <li>
+                            The R<sup>2</sup> value ("R-squared" row) represents the proportion of variance in the dependent variable that can be explained by our independent variable 
+                    </li>
+                </ol>
+    
+                <br>
+                <h4>Interpretation</h4>
+    
+                <p>
+                        Please keep the following in mind: 
+                </p>
+
+                <ol>
+                    <li>
+                            An introduction to the analysis
+                    </li>
+                    
+                    <li>
+                            The observed t-value, 95% confidence intervals, degrees of freedom, and significance level (or more specifically, the 2-tailed p-value) 
+                    </li>
+
+                    <li>
+                            The information about the sample, including how many participants there were in your sample 
+                    </li>
+
+                    <li>
+                            The percentage of the variability in the dependent variable explained by the independent variable (e.g. your Adjusted  R<sup>2</sup>)
+                    </li>
+
+                    <li>
+                            The regression equation for your model 
+                    </li>
+
+                    <li>
+                            The  observed F-value , degrees of freedom and significance level(e.g. the p-value)
+                    </li>
+
+                </ol>
+
+                <p>
+                        In this example,R<sup>2</sup>> = 0.151 and adjusted R<sup>2</sup> = 0.143 (to 3 d.p.), which means that the independent 
+                        variable , <b>time_tv</b> explains 14.3% of the variability of the dependent variable <b>cholesterol</b>, in the 
+                        population. Adjusted R<sup>2</sup> is also an estimate of the effect size, which at 0.143 (14.3%), is indicative 
+                        of a medium effect size. However, normally it is R<sup>2</sup> not the adjusted R<sup>2</sup> that is reported in results. In 
+                        this example, the regression model is statistically significant, F(1, 98) = 17.47 p = .0001. This 
+                        indicates that, overall, the model applied can statistically significantly predict the dependent 
+                        variable,  <b>cholesterol</b>.
+
+                        <br><br>
+                        In the end it could look like this: 
+                        <br>
+                        The researcher   conducted a linear regression with the result that daily time spent watching TV could statistically significantly predict cholesterol concentration, F(1,98) = 17,47, p= .0001 and time spent watching TV accounted for 14.3% of the explained variability in cholesterol concentration. The regression equation was: predicted cholesterol concentration = -2.135 + 0.044 x (time spent watching TV)
+
+                </p>
+                
+                <br>
+                <h4>Sources </h4>
+        
+                <p>
+                        <a href="http://onlinestatbook.com/2/regression/intro.html">http://onlinestatbook.com/2/regression/intro.html</a>  
+                        <br>
+                        <a href="https://en.wikipedia.org/wiki/Simple_linear_regression">https://en.wikipedia.org/wiki/Simple_linear_regression</a>  
+                        <br>
+                        <a href="https://www.statisticssolutions.com/assumptions-of-linear-regression/">https://www.statisticssolutions.com/assumptions-of-linear-regression/</a>  
+                        <br>
+                        <a href="http://onlinestatbook.com/2/regression/inferential.html">http://onlinestatbook.com/2/regression/inferential.html</a>  
+                        <br>
+                        <a href="http://people.duke.edu/~rnau/testing.htm#assumptions">http://people.duke.edu/~rnau/testing.htm#assumptions</a>  
+                        <br>
+                        <a href="https://realpython.com/linear-regression-in-python/#simple-linear-regression-with-scikit-learn">https://realpython.com/linear-regression-in-python/#simple-linear-regression-with-scikit-learn</a>  
+                        <br>
+                        <a href="https://towardsdatascience.com/simple-and-multiple-linear-regression-in-python-c928425168f9">https://towardsdatascience.com/simple-and-multiple-linear-regression-in-python-c928425168f9</a>  
+                        <br>
+                        <a href="https://scikit-learn.org/stable/auto_examples/linear_model/plot_ols.html">https://scikit-learn.org/stable/auto_examples/linear_model/plot_ols.html</a>  
+                        <br>
+                        <a href="https://statistics.laerd.com/spss-tutorials/linear-regression-using-spss-statistics.php">https://statistics.laerd.com/spss-tutorials/linear-regression-using-spss-statistics.php</a>  
+                        <br>
+                        
+                        
+                </p>
+                        
+                    <br> <br>
+                <label for="SubmitButton">Do you know another Method by heart? If so please consider submitting it!</label> <br> <br>
+                <button id="SubmitButton" class="SubmitButton" onclick="window.location.href='../submitMethod.html'">Sounds great!</button>
+            </div>
+    </div>
 </body>
 </html>

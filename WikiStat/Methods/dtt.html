@@ -19,100 +19,157 @@
             </div>
             
             <div class="content">
-    <h1>Dependent t-test</h1>
-    <div class="chi">
+    <h1>Dependent T-Test</h1>
+    <div class="dtt">
+
+        <!-- <a href="#chapter">test</a> -->
 
         <p>
                 short:  tests for difference between two related variables
         </p>
 
-        <h2>Introduction: </h2>
+        <h2>Introduction </h2>
         <p>
-                The paired t-test (also called the paired-samples t-test or dependent t-test) is a statistical procedure used to compare the means between two related groups  based on the same continuous dependent variable. Specifically the test is used to determine whether the mean difference between two sets of observations is zero. Before-and-after observations on the same subjects are suitable for this test. For instant you could analyse the difference in managers' salaries before and after undertaking a PhD. Your dependent variable would be 'salary' and your two related groups would be two different 'time points' that is the salary 'before' and 'after' undertaking the PhD. But also the comparison of two methods of measurement or two different treatments where the measurements/treatments are applied to the same subject (i.e. the use of a stethoscope and a dynamap for a blood pressure measurement).
+                The dependent t-test (also called the paired-samples t-test or paired t-test) is a statistical procedure used to compare the means between two related groups  based on the same continuous dependent variable. Specifically the test is used to determine whether the mean difference between two sets of observations is zero. Before-and-after observations on the same subjects are suitable for this test. For instant you could analyse the difference in managers' salaries before and after undertaking a PhD. Your dependent variable would be 'salary' and your two related groups would be two different 'time points' that is the salary 'before' and 'after' undertaking the PhD. But also the comparison of two methods of measurement or two different treatments where the measurements/treatments are applied to the same subject (i.e. the use of a stethoscope and a dynamap for a blood pressure measurement).
         </p>
 
         <br>
-        <h2>Assumptions: </h2>
+        <h2>Assumptions </h2>
         <p>
                 In the following you can see the  four assumptions you must meet in order for a dependent t-test to give your data a valid result.
         </p>
 
         <ol>
-            <li>Assumption: The dependent variable should be continous. Such as height, temperature, salary, revision time, intelligence (measured in using IQ score), reaction time, test, sales etc.. are measurable at the interval or ratio level. For me help you can see more Types of Variables here statistic.laerd.com </li>
-            <li>Assumption: The independent variable should consists of two categorial, 'related groups' or 'matched pairs'. That means the same subjects must be present in both groups because the subject has been measured on two occasions on the same dependent variable. For example: the dependent variable – 50 participants doing type speed using a keyboard two 'related groups' of independent varible – 'before' and 'after' the touch-typing course. These groups are relates because they were measured at theses two time points.</li>
-            <li>Assumption: There should not be a an outlier in the difference between the two related groups which means that an outlier is a single data point within your data that does not follow the usual pattern. These outliers can have a negative impact on the paired t-test and reduce the accuracy of the final result. </li>
-            <li> Assumption: The distribution of the differences in the dependent variable between the two related groups should be approximately normally distributed. We talk about the paired t-test only requiring approximately normal data because it is quite "robust" to violations of normality, meaning that the assumption can be a little violated and still provide valid results. You can test for normality using the Shapiro-Wilk test of normality, which is easily tested for using Stata. </li>
+                <li>Assumption: The dependent variable should be continuous. Such as height, temperature, salary, revision time, intelligence (measured in using IQ score), reaction time, test, sales etc.. are measurable at the interval or ratio level. For me help you can see more Types of Variables here statistic.laerd.com </li>
+                <li>Assumption: The independent variable should consists of two categorial, 'related groups' or 'matched pairs'. That means the same subjects must be present in both groups because the subject has been measured on two occasions on the same dependent variable. <br> For example: the dependent variable – 50 participants doing type speed using a keyboard two 'related groups' of independent variable – 'before' and 'after' the touch-typing course. These groups are relates because they were measured at theses two time points. </li>
+                <li>Assumption: There should not be a an outlier in the difference between the two related groups which means that an outlier is a single data point within your data that does not follow the usual pattern. These outliers can have a negative impact on the paired t-test and reduce the accuracy of the final result.</li>
+                <li>Assumption: The distribution of the differences in the dependent variable between the two related groups should be approximately normally distributed. We talk about the paired t-test only requiring approximately normal data because it is quite "robust" to violations of normality, meaning that the assumption can be a little violated and still provide valid results.</li>
         </ol>
             
         <br>
-        <h2>Example: </h2>
+        <h2>Example </h2>
         <p>
-                A company researcher wants to test a new formular for a medecine that has been designed to improve the increased blood pressure as a result of  health problems. The researcher would like to know wether this new medecine leads to a difference in running performance compared to not taking any medecine. In order to carry out the experiment, the researcher tested 60 females and males with a agegroup between 35-60+. All of the participants needed two trials in which they had to run for 2,5 hours on a treadmill. In the one trial, the same participants completed the run without taking any medicines and in the other trial they completed the run with the intake of the medicine. 
-        </p>
-
-        <br>
-        <h4>Setup in Python: </h4>
-        <p>
-                In Python we created two variables. These are 'bp_before' and 'bp_after'. The next step is to import panda as pd, the data, and then take a look at the data
-        </p>
-        <br>
-        <img src="../Images/ddt/ok.jpg" alt="Home Image">
-        <br>
-        <img src="../Images/ddt/ok.jpg" alt="Home Image">
-        <br>
-
-        <br>
-        <h2>Checking the Assumptions: </h2>
-       
-        <h4>Assumption check: Outliers</h4>
-        <p>
-                For checking the assumption we need to import the stats library and then test the assumptions of the paired t-est. The first thing to do is to check for any significant outliers in each of the variables.    
-        </p>
-
-        <br>
-        <img src="../Images/ddt/ok.jpg" alt="Home Image">
-        <br>
-        <img src="../Images/ddt/ok.jpg" alt="Home Image">
-        <br>
-        <p>
-                As you can see there are not any significant outliers in the variables. 
-        </p>
-
-        <br>
-        <h4>Assumption check: Normal Distribution</h4>
-
-        <p>
-                As mentioned before the normality check needs to be conducted on differences between two scores. There are a few ways one can test this assumption – the use of a histogram, make a Q-QPlot or use a statistical test.
+                To explain you the use of a  Paired T-test we gonna take the example of laerd.com  
                 <br>
-                In this case we gonna show how to check this assumption with the help of a Q-Q Plot. Create a variable for the differences and run through these. If you a unfamiliar with how to read s Q-Qplot,, the data should be on the red line. If that is not the case, then it suggests that the data may not be normally distributed.                
-        </p>
-        <br>
-        <img src="../Images/ddt/ok.jpg" alt="Home Image">
-        <br>
-        <img src="../Images/ddt/ok.jpg" alt="Home Image">
-        <br>
-        <p>
-                As you can see there is some deviation from normality but it does not seem to be severe. Which means that there is no worry. 
-        </p>
+                In the example of  laerd.com a company researcher tests a new formula for a sports drink.  Compared to the regular "carbohydrate-only" drink  the new formula with "carbohydrate-protein" drink should change  the running performance positively. The question for this case is wether this new sports drink does make a change in running performance compared to the "carbohydrate-only" drink.
+                <br>
+                We choose 'formula' as independent variable and 'running performance' as  the dependent variable . Now we have two related groups: "carbohydrate-protein" and "carbohydrate-only".
+                <br>
+                20 middle distance runners participated  in this experiment where they had to run as far as possible for 2 hours on a treadmill. Each of them had performed two trials. In one trial the runners needed to drink the bottle with  carbohydrate-only formula and in the other the bottle with x carbohydrateprotein formula.
+                <br>
+                The goal is to show whether significant difference in distance run between the two trials exists or not (i.e., when using the carbohydrate-protein drink compared to the carbohydrate-only drink).
 
-        <br>
-        <h4>Paired Samples T-Test Example</h4>
-        <p>
-                To conduct the paired t-test, it needs to use the <i>stats.ttest_rel() method.</i>
         </p>
 
         <br>
-        <img src="../Images/ddt/ok.jpg" alt="Home Image">
-        <br>
-
+        <h4>Setup in Stata </h4>
         <p>
-                The findings you will see are statistically significant! One can reject the null hypothesis in support of the alternativ. Another component needed to report the findings is the degrees of freedom (df). This can be calculated by taking the total number of paired observations and subtracting 1. In our case, df = 120 – 1 = 119.
+                In order to use stata follow the site below to download/purchase stata: 
+                <br>
+                <a href="https://www.stata.com/order/download-details/">https://www.stata.com/order/download-details/</a>
+        </p>
+
+        <ol>
+                <li>Create two variables: (1) <b>carb</b> = the distance run in km un 2 hours for the carbohydrate-only (2) <b>carb_protein</b> =  the distance run in km un 2 hours for the carbohydrate-protein </li>
+                <p>Note: the variables mean two 'related groups' </p>
+                <li>
+                        Enter the scores for the dependent variable, <i>Distance run</i>, into the two columns of the <b>Data Editor(Edit) .</b>  One column for carb and the other for carb_protein
+                        <br> <br>
+                        <img src="../Images/ddt/paired1.png" alt="First Image">
+                </li>
+                <li>
+                        Test the procedure in Stata: 
+                        <br>
+                        If in the previous section the Assumptions have not been violated. We gonna cary out the test using Stata's graphical user interface(GUI). 
+                        <br>
+                        In Stata Version 13 all you need to do is  click  <b>Statistics > Summaries, tables, and tests > Classical tests of hypotheses > t test (mean comparison test)</b> on the top menu, as shown below.
+                        <br><br>
+                        <img src="../Images/ddt/paired2.png" alt="Second Image">
+                        <br><br>
+                        You will see the t tests(mean-comparison tests) dialogue box: 
+                        <br><br>
+                        <img src="../Images/ddt/paired3.png" alt="Third Image">
+                        <br><br>
+                        Select the <i>Paired</i>  option in the <i>-t-tests-:</i> 
+                        <br><br>
+                        <img src="../Images/ddt/paired4.png" alt="Fourth Image">
+                        <br><br>
+                        Select <b>carb_protein</b> from within the  <b>First variable</b>  in the <i>-Paired t-test-</i>  area : drop down box. 
+                        <br>
+                        Select <b>carb</b>  from within the <b>Second variable</b>: drop down box. 
+                        <br>
+                        In this example keep the default 95% confidence interval by keeping 95 value in the <b>Confidence level</b>  drop-down box.
+                        <br><br>
+                        <img src="../Images/ddt/paired5.png" alt="Fifth Image">
+                        <br><br>
+                        Now click enter.
+                </li>
+        </ol>
+
+        
+        <br>
+        <h2>Output </h2>
+       
+        <br>
+                <img src="../Images/ddt/paired6.png" alt="Sixth Image"> 
+        <br><br>
+        
+        <p>
+                The output provides useful information for the research including the mean and standard deviation 
+                and the  actual results from the paired t-test.  Take a look at the <b>Mean</b> column: You see those 
+                people  who used the nicotine patches had lower cigarette consumptions at the end of the 
+                experiment compared to those who received the placebo.  There is a mean difference between the 
+                two trials of 0.1355 km (<b>Mean</b>) with a standard deviation of 0.09539 km (<b>Std. Dev.</b>), a standard 
+                error of the mean of 0.02133 km (<b>Std. Err.</b>), and 95% confidence intervals of 0.09085 to 0.18015 
+                km (<b>95% Conf. interval</b>). 
+                <br>
+                You are presented with an obtained t -value (t) of 6.3524, the degrees of freedom (<b>degrees of freedom</b>), which are 19, and the statistical significance (2-tailed p-value) of the paired t-test (<b>Pr(|T| > |t|</b>) 
+                under <b>Ha: mean(diff) != 0</b>), which is 0.0000. As the p-value is less than 0.05 (i.e., p < .05), it 
+                can be concluded that there is a statistically significant difference between our two variable scores 
+                (<b>carb</b>  and <b>carb_protein</b>).  In other words, the difference between the two run distances is not equal to zero.
         </p>
 
         <br>
-        <h2>Interpretation of the Results</h2>
+        <h4>Report the Output </h4>
+
         <p>
-                The paired t-test was used to analyze the blood pressure before and after taking the medecine to test if the intervention had a significant affect on the blood pressure. The blood pressure before the intervention was higher (156.45 ± 11.39 units) compared to the blood pressure post intervention (151.36 ± 14.18 units); there was a statistically significant decrease in blood pressure (t(119)=3.34, p= 0.0011) of 5.09 units.
+                Here aa few things you should include into your interpretation: 
+                <br>
+                <ol>
+                        <li>
+                                An introduction to the analysis you carried out
+                        </li>
+                        <li>
+                                The observed t-value, 95% confidence intervals, degrees of freedom, and significance level (or more specifically, the 2-tailed p-value)  
+                        </li>
+                        <li>
+                                The information about your sample, including how many participants there were in your sample  
+                        </li>
+                        <li>
+                                The mean and standard deviation for your two related groups
+                        </li>
+                </ol>
+                In the end it could look like this:
+                <br>
+                The researcher   conducted a paired  t-test with a sample of 20 middle distance runners to determine whether there was a significant mean difference between the distance ran when the runners drank the carbohydrate-protein drink compared to the  carbohydrate-only drink. The participants ran further with the  carbohydrate-protein drink (11.17 ±  0.71 km') than with carbohydrate-only drink (11.17 ±  0.73 km); that's a statistically increas of 0.1355 (95% CI, 0.0909 to 0.1802) km, t(19) = 6.352,p< .0005, d= 1.42.
+        </p>
+        
+        <!-- <a name="chapter"></a> -->
+
+        <br>
+        <h4>Sources </h4>
+
+        <p>
+                <a href="https://statistics.laerd.com/stata-tutorials/paired-t-test-using-stata.php#code">https://statistics.laerd.com/stata-tutorials/paired-t-test-using-stata.php#code</a>  
+                <br>
+                <a href="http://www.statstutor.ac.uk/resources/uploaded/paired-t-test.pdf">http://www.statstutor.ac.uk/resources/uploaded/paired-t-test.pdf</a>
+                <br>
+                <a href="https://blog.minitab.com/blog/adventures-in-statistics-2/understanding-t-tests-1-sample-2-sample-and-paired-t-tests">https://blog.minitab.com/blog/adventures-in-statistics-2/understanding-t-tests-1-sample-2-sample-and-paired-t-tests</a>
+                <br>
+                <a href="https://libguides.library.kent.edu/SPSS/PairedSamplestTest">https://libguides.library.kent.edu/SPSS/PairedSamplestTest</a>
+                <br>
+                <a href="https://pythonfordatascience.org/paired-samples-t-test-python/#test">https://pythonfordatascience.org/paired-samples-t-test-python/#test</a>
+
         </p>
 
 
