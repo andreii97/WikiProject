@@ -10,6 +10,11 @@ body {
     /* padding-right: 200px; */
 }
 
+.cont {
+    padding: 50px;
+    /* padding-right: 200px; */
+}
+
 /* .btn {
     width: 70px;
     height: 30px;
@@ -21,6 +26,8 @@ body {
     height: 30px;
     color: brown;
 } */
+
+
 
 .overview {
     width: 200px;
