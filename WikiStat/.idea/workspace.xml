@@ -2,36 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d2319ca-b914-4a2e-ac4f-e5ea1db909e9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods/ancova.html" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/ancova.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods/chi.html" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/chi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods/dtt.html" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/dtt.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods/facmanova.html" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/facmanova.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods/facmix.html" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/facmix.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods/facrep.html" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/facrep.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods/fried.html" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/fried.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods/indepfac.html" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/indepfac.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods/itt.html" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/itt.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods/kwt.html" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/kwt.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods/likeratio.html" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/likeratio.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods/linearReg.html" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/linearReg.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods/logireg.html" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/logireg.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods/loglin.html" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/loglin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods/logreg.html" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/logreg.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods/mancova.html" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/mancova.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods/manova.html" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/manova.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods/multreg.html" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/multreg.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods/mwt.html" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/mwt.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods/orm.html" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/orm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods/owiANO.html" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/owiANO.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods/pearson.html" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/pearson.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods/spear.html" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/spear.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Methods/wmpt.html" beforeDir="false" afterPath="$PROJECT_DIR$/Methods/wmpt.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/overview.html" beforeDir="false" afterPath="$PROJECT_DIR$/overview.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/submitMethod.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/wikistat.html" beforeDir="false" afterPath="$PROJECT_DIR$/wikistat.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -45,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wikistat.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="687">
-              <caret line="93" column="21" lean-forward="true" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
+            <state relative-caret-position="-207">
+              <caret line="37" column="190" selection-start-line="37" selection-start-column="190" selection-end-line="37" selection-end-column="190" />
             </state>
           </provider>
         </entry>
@@ -57,17 +29,36 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="563">
+            <state relative-caret-position="-57">
               <caret line="164" column="55" selection-start-line="164" selection-start-column="55" selection-end-line="164" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2475">
+              <caret line="165" column="17" lean-forward="true" selection-start-line="165" selection-start-column="4" selection-end-line="165" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/overview.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="45" column="106" selection-start-line="45" selection-start-column="106" selection-end-line="45" selection-end-column="106" />
+            <state relative-caret-position="573">
+              <caret line="67" column="115" selection-start-line="67" selection-start-column="115" selection-end-line="67" selection-end-column="115" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#ul#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,8 +69,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -89,8 +80,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test.json" />
-        <option value="$PROJECT_DIR$/style2.css" />
         <option value="$PROJECT_DIR$/js/script2.js" />
         <option value="$PROJECT_DIR$/methods.json" />
         <option value="$PROJECT_DIR$/submitMethod.html" />
@@ -126,8 +115,6 @@
         <option value="$PROJECT_DIR$/Methods/simpleReg.html" />
         <option value="$PROJECT_DIR$/script3.js" />
         <option value="$PROJECT_DIR$/inbetweeen.html" />
-        <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/wikistat.html" />
         <option value="$PROJECT_DIR$/home.html" />
         <option value="$PROJECT_DIR$/ibt.html" />
         <option value="$PROJECT_DIR$/doubleOutputs/ibt.html" />
@@ -139,6 +126,10 @@
         <option value="$PROJECT_DIR$/doubleOutputs/ibt5.html" />
         <option value="$PROJECT_DIR$/js/script.js" />
         <option value="$PROJECT_DIR$/doubleOutputs/ibt6.html" />
+        <option value="$PROJECT_DIR$/wikistat.html" />
+        <option value="$PROJECT_DIR$/style.css" />
+        <option value="$PROJECT_DIR$/test.html" />
+        <option value="$PROJECT_DIR$/styleTest.css" />
         <option value="$PROJECT_DIR$/overview.html" />
       </list>
     </option>
@@ -149,10 +140,9 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="829" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="width" value="714" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -244,12 +234,12 @@
       <workItem from="1562249699090" duration="7799000" />
       <workItem from="1562692775755" duration="1336000" />
       <workItem from="1562707026842" duration="2623000" />
-      <workItem from="1562763298362" duration="11905000" />
+      <workItem from="1562763298362" duration="16715000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55497000" />
+    <option name="totallyTimeSpent" value="60307000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -287,10 +277,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/jquery-3.4.1.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/jason.json" />
     <entry file="file://$PROJECT_DIR$/methods.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1830">
@@ -549,13 +535,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14">
-          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -605,13 +584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="164" column="55" selection-start-line="164" selection-start-column="55" selection-end-line="164" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/doubleOutputs/ibt6.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -619,17 +591,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wikistat.html">
+    <entry file="file://$PROJECT_DIR$/styleTest.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
-          <caret line="93" column="21" lean-forward="true" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
+        <state relative-caret-position="240">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/overview.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="106" selection-start-line="45" selection-start-column="106" selection-end-line="45" selection-end-column="106" />
+        <state relative-caret-position="573">
+          <caret line="67" column="115" selection-start-line="67" selection-start-column="115" selection-end-line="67" selection-end-column="115" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57">
+          <caret line="164" column="55" selection-start-line="164" selection-start-column="55" selection-end-line="164" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2475">
+          <caret line="165" column="17" lean-forward="true" selection-start-line="165" selection-start-column="4" selection-end-line="165" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wikistat.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-207">
+          <caret line="37" column="190" selection-start-line="37" selection-start-column="190" selection-end-line="37" selection-end-column="190" />
         </state>
       </provider>
     </entry>

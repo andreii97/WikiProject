@@ -155,7 +155,12 @@ input[type=text], select, textarea {
     padding: 4px 6px;
     width: 2.5%;
 }
-  
+
+  .learn {
+      color: red;
+  }
+
+
   .menu a:hover {
     background: #ddd;
     color: black;
