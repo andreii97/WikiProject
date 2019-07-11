@@ -42,12 +42,12 @@ $(document).ready(function () {
     });
     $("#catg").on('click', function () {
         alert("Get ready for more questions!");
-        $(".fourthQuestion").append("<h3>1. How many categories</h3>" + "<select id='hidden'><option value=\"\" disabled selected>Select your option</option><option>Two</option><option>More Than Two</option></select>");
+        $(".fourthQuestion").append("<h3> Bonus Question 1. How many categories?</h3>" + "<select id='hidden'><option value=\"\" disabled selected>Select your option</option><option>Two</option><option>More Than Two</option></select>");
         $("#hidden").change(function () {
             categorical1 = $(this).children("option:selected").text();
             console.log(categorical1);
         });
-        $(".fourthQuestion").append("<h3>2. Same Participants or Different Used in Each Category?</h3>" + "<select id='hidden1'><option value=\"\" disabled selected>Select your option</option><option>Different</option><option>Same</option><option>Both</option></select>");
+        $(".fourthQuestion").append("<h3> Bonus Question 2. Same Participants or Different Used in Each Category?</h3>" + "<select id='hidden1'><option value=\"\" disabled selected>Select your option</option><option>Different</option><option>Same</option><option>Both</option></select>");
         $("#hidden1").change(function () {
             categorical2 = $(this).children("option:selected").text();
             console.log(categorical2);
