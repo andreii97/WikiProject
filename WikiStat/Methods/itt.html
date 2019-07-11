@@ -19,13 +19,146 @@
 
             <div class="content">
             
-    <h1>Independent t-test</h1>
+    <h1>Independent T-Test</h1>
     <br>
-    <div class="chi">
-        <h2>Description: </h2>
+    <div class="itt">
+       
+
         <p>
-            This Method seems to be missing in our archives!:O      </p>
-            <br> <br>
+                Independent T-Test is a statistical methods that helps us to compare the means of two sets of data. It helps to compare whether the two groups have different average values. For instant whether men and women have different average heights. Keep in mind that this test can only be used for only two groups, interventions or change scores.
+        </p>
+    
+            <br>
+            <h2>Assumptions </h2>
+    
+            <ol>
+                    <li>
+                            Assumption: The dependent variable should be continous. Such as height, temperature, salary, revision time, intelligence (measured in using IQ score), reaction time, test, sales etc.. are measurable at the interval or ratio level. For me help you can see more Types of Variables here statistic.laerd.com
+                    </li>
+    
+                    <li>
+                            Assumption: The independent variable should consists of two categorial, 'unrelated groups'. For example: gender group: male and female; religious(2 groups:yes or no). 
+                    </li>
+    
+                    <li>
+                            Assumption: There should not be a an outlier which means that an outlier is a single data point within your data that does not follow the usual pattern. These outliers can have a negative impact on the independent t-test and reduce the accuracy of the final result. 
+                    </li>
+    
+                    <li>
+                            Assumption: You should have independence of observations. It means there should not be  a relationship between the groups themselves.
+                    </li>
+    
+                    <li>
+                            Assumption: The dependent variable should be approx. normally distributed for each category of the independent variable.
+                    </li>
+            </ol>
+                
+            <br>
+            <h2>Example </h2>
+            <p>
+                The researcher want to find out whether the use of nicotine patches reduces cigarette consumption. If it is the case by how much it would be. The researcher is working for the government who wants to find a solution for heavy smokers struggling to quit. In order for that 30 heavy smokers participate in this project. The smoker is defined as a person who smokes an average of 40 cigarettes or more per day. These people are then split in two 2 independent groups, one 'control group' the other 'treatment group'. To prevent a 'placebo' both party were given patches, but just one group got the one with the nicotine. The experiment takes 3 months. Then the two was measured in terms of the average number of cigarettes smoked per day. The dependent variable  was ' cigarettes consumption' (number of  smoked cigarettes at the end of the experiemnt) and the independent variable 'treatment type', where there were two independent groups (the treatment and control group)
+            </p>
+    
+            <br>
+            <h4>Setup in Stata </h4>
+            <p>
+                    In order to use stata follow the site below to download/purchase stata: 
+                    <br>
+                    <a href="https://www.stata.com/order/download-details/">https://www.stata.com/order/download-details/</a>
+            </p>
+    
+            <p>
+                Now we separate two groups by creating a grouping variable <b>TreatmentType:</b> The control group who received the placebo '1-- Placebo' The treatment group who received the nicotine patches  a value of ' 2—Nicotine patch'
+                <br><br>
+                <img src="../Images/itt/itt_1.png" alt="First Image">
+                <br><br>
+        
+                Then enter the scores for <b>cigarettesConsumption</b>  in the column to the right of the <b>TreatmentType</b> into the Data Editor (Edit) spreadsheet
+                <br><br>
+                <img src="../Images/itt/itt_2.png" alt="Second Image">
+                <br><br>
+                Test the procedure in Stata: If in the previous section the Assumptions have not been violated. We gonna cary out the test using Stata's graphical user interface(GUI). 
+                <br>
+                In Stata Version 13 all you need to do is click <b>Statistics >Summaries,tables,and tests > Classical tests of hypotheses > t test (mean-comparison</b> on the top menu, as shown below. 
+                <br><br>
+                <img src="../Images/itt/itt_3.png" alt="Third Image">
+                <br><br>
+                You will see the t tests(mean-comparison tests) dialogue box:
+                <br><br>
+                <img src="../Images/itt/itt_4.png" alt="Fourth Image">
+                <br><br>
+                Choose <b>Two-sample using groups</b>  option in the  <b>-t-tests-</b>  area: 
+                <br><br>
+                <img src="../Images/itt/itt_5.png" alt="Fifth Image">
+                <br><br>
+                Now choose the dependent variable, <b>CigarettesConsumption</b>  from the <b>Variable name</b> : dropdown box. And choose <b>TreatmentType</b>  from the <b>Group variable name</b>  drop-down box.
+                <br><br>
+                <img src="../Images/itt/itt_6.png" alt="Sixth Image">
+                <br><br>
+                Next click on enter
+            </p>
+    
+            <br>
+            <h2>Output </h2>
+            
+            <br>
+                <img src="../Images/itt/itt_7.png" alt="Seventh Image"> 
+            <br><br>
+            
+            <p>
+                In the output you can see the two compared groups, the standard and mean deviation but also the 
+                actual results from the independent t-test. The groups means are significantly different as the pvalue 
+                in the Pr ( <b>(|T| > |t|)</b> ) row is less than 0.05. Take a look st the <b>Mean</b>  column it is seen that the 
+                people who used th nicotine patches had lower cigarette consumption at the end of the experiment 
+                than the one without nicotine.
+            </p>
+    
+            <br>
+            <h4>Interpretation</h4>
+    
+            <p>
+                    Please keep the following in mind: 
+            </p>
+    
+            <ol>
+                <li>
+                        An introduction to the analysis
+                </li>
+                
+                <li>
+                        The mean and standard deviation for your two unrelated groups 
+                </li>
+    
+                <li>
+                        The information about your sample, including how many participants there were in each group 
+                </li>
+    
+                <li>
+                        The observed t-value (t), degress of freedom, significance level( p-value: Pr ( <b>(|T| > |t|)</b> )
+                </li>
+    
+            </ol>
+    
+            <p>
+                    
+                    In the end it could look like this: 
+                    <br>
+                    The researchers conducted a independent t-test with a sample of 30 heavy smokers in order to find out whether there were difference in cigarettes consumption based on treatment type. There were the control group with the placebo patches and the treatment group with the nicotine patches. Both groups  were equally and randomly divided. The results showed that participants given nicotine patches had statistically significantly lower cigarette consumption (21.47 ± 2.07 cigarettes) at the end of the experiment than participants given the placebo (28.53 ± 2.07 cigarettes), t(28) = 2.410, p = 0.023.
+            </p>
+            
+            <br>
+            <h4>Sources </h4>
+    
+            <p>
+                <a href="http://docs.statwing.com/examples-and-definitions/t-test/">http://docs.statwing.com/examples-and-definitions/t-test/</a>  
+                <br>
+                <a href="https://statistics.laerd.com/stata-tutorials/independent-t-test-using-stata.php">https://statistics.laerd.com/stata-tutorials/independent-t-test-using-stata.php</a>  
+                <br>
+                <a href="https://libguides.library.kent.edu/SPSS/IndependentTTest">https://libguides.library.kent.edu/SPSS/IndependentTTest</a>
+                <br>
+            </p> 
+        <br> <br>
+            
     </div>
 </div>
 </body>
